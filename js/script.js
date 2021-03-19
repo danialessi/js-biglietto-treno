@@ -15,17 +15,16 @@ var prezzo = 0.21 * numeroChilometri;
 
 // Sconto 20%
 var percent20 = (prezzo / 100) * 20;
-var prezzoMinorenni = prezzo - percent20;
 
 // Sconto 40% 
 var percent40 = (prezzo / 100) * 40;
-var prezzoOver = prezzo - percent40;
 
 // prezzo viaggio 
 if (numeroEtà < 18) {
-    alert(prezzoMinorenni);
+    prezzo = prezzo - percent20;
 } else if (numeroEtà > 65) {
-    alert(prezzoOver);
-} else {
-    alert(prezzo)
+    prezzo = prezzo - percent40;
 }
+
+// output 
+alert(prezzo);
