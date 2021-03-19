@@ -12,12 +12,15 @@ console.log(numeroEtà);
 
 // Prezzo biglietto
 var prezzo = 0.21 * numeroChilometri;
+prezzo = prezzo.toFixed(2);
 
 // Sconto 20%
 var percent20 = (prezzo / 100) * 20;
+console.log(percent20);
 
 // Sconto 40% 
 var percent40 = (prezzo / 100) * 40;
+console.log(percent40);
 
 // prezzo viaggio 
 if (numeroEtà < 18) {
@@ -27,4 +30,4 @@ if (numeroEtà < 18) {
 }
 
 // output 
-alert(prezzo);
+document.getElementById("prezzo").innerHTML = prezzo;
